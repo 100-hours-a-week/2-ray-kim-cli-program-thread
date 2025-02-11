@@ -1,16 +1,28 @@
 package model.product;
 
-public class Product {
+import constants.ProductType;
+
+public abstract class Product {
+    protected ProductType type;
     protected String name;
     protected int price;
     protected String color;
     protected int storage;  // GB 단위
 
-    public Product(String name, int price, String color, int storage) {
+    public Product(ProductType type, String name, int price, String color, int storage) {
+        this.type = type;
         this.name = name;
         this.price = price;
         this.color = color;
         this.storage = storage;
+    }
+
+    public ProductType getType() {
+        return type;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void displayInfo() {

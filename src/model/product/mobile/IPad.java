@@ -1,13 +1,15 @@
 package model.product.mobile;
 
+import constants.ProductType;
+
 public class IPad extends Mobile {
-    protected String pencilSupport;  // "1세대", "2세대", "미지원"
-    protected String keyboardSupport;  // "Magic Keyboard", "Smart Keyboard", "미지원"
+    protected String pencilSupport;
+    protected String keyboardSupport;
 
     public IPad(String name, int price, String color, int storage,
                 String network, double screenSize, String pencilSupport,
                 String keyboardSupport) {
-        super(name, price, color, storage, network, screenSize);
+        super(ProductType.IPAD, name, price, color, storage, network, screenSize);
         this.pencilSupport = pencilSupport;
         this.keyboardSupport = keyboardSupport;
     }

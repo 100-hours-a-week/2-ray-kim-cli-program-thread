@@ -1,12 +1,14 @@
 package model.product.computer;
 
+import constants.ProductType;
+
 public class IMac extends Computer {
-    protected double displaySize; // 인치
-    protected String ethernet;    // "기가비트 이더넷" 또는 "없음"
+    protected double displaySize;
+    protected String ethernet;
 
     public IMac(String name, int price, String color, int storage,
                 String cpu, int ram, double displaySize, String ethernet) {
-        super(name, price, color, storage, cpu, ram);
+        super(ProductType.IMAC, name, price, color, storage, cpu, ram);
         this.displaySize = displaySize;
         this.ethernet = ethernet;
     }

@@ -1,14 +1,15 @@
 package model.product.computer;
 
+import constants.ProductType;
 import model.product.Product;
 
-public class Computer extends Product {
+public abstract class Computer extends Product {
     protected String cpu;
     protected int ram;  // GB 단위
 
-    public Computer(String name, int price, String color, int storage,
+    public Computer(ProductType type, String name, int price, String color, int storage,
                     String cpu, int ram) {
-        super(name, price, color, storage);
+        super(type, name, price, color, storage);
         this.cpu = cpu;
         this.ram = ram;
     }

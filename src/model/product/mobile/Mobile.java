@@ -1,14 +1,15 @@
 package model.product.mobile;
 
+import constants.ProductType;
 import model.product.Product;
 
-public class Mobile extends Product {
-    protected String network;  // 5G/LTE/WiFi
-    protected double screenSize;  // 인치
+public abstract class Mobile extends Product {
+    protected String network;
+    protected double screenSize;
 
-    public Mobile(String name, int price, String color, int storage,
+    public Mobile(ProductType type, String name, int price, String color, int storage,
                   String network, double screenSize) {
-        super(name, price, color, storage);
+        super(type, name, price, color, storage);
         this.network = network;
         this.screenSize = screenSize;
     }
